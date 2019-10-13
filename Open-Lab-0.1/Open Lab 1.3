@@ -4,11 +4,14 @@ namespace Open_Lab_1._3
 {
     class Program
     {
+        public static int Addition(int cislo)
+        {
+            return (cislo + 1);
+        }
         static void Main(string[] args)
         {
-            int cislo = 9;
-            cislo++;
-            Console.WriteLine(cislo);
+            Console.WriteLine(Addition(9));
         }
     }
 }
+
