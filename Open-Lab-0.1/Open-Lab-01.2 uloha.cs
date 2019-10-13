@@ -4,12 +4,13 @@ namespace OpenLab
 {
     class Program
     {
+        public static int Sum(int cislo1, int cislo2)
+        {
+            return (cislo1 + cislo2);
+        }
         static void Main(string[] args)
         {
-            int a = 5;
-            int b = 6;
-            int c = a + b;
-            Console.WriteLine(c);
+            Console.WriteLine(Sum(5, 10));
         }
     }
 }
