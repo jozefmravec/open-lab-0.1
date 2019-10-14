@@ -1,0 +1,19 @@
+using System;
+
+namespace openlab_0._1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            float[] array1 = {1.1F,2.2F,3.3F,4.4F,5.5F};
+            int count = 0;
+            foreach (float element in array1)
+            {
+                count++;
+                Console.Write($"{element.ToString("N2")} ");
+            }
+            
+        }
+    }
+}
