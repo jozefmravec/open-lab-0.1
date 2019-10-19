@@ -1,0 +1,17 @@
+﻿using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        public static int GetLegsCount(int chickens, int cows, int pigs)
+        {
+            return (chickens * cows * pigs);
+                
+        }
+        static void Main(string[] args)
+        {
+            Console.WriteLine(GetLegsCount(2,4,4));
+        }
+    }
+}
