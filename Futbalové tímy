@@ -1,0 +1,83 @@
+using System;
+
+namespace asdasd
+{
+    class Program
+    {
+        public static string GetRes()
+        {
+         var player = new Class1();
+         var team1 = player.FootballTeam1();
+         var team2 = player.FootballTeam2();
+         if (team1 > team2)
+            return "Team one WON!!";
+         else
+            return "Team two WON!!";
+        }
+        static void Main(string[] args)
+        {
+            Console.WriteLine(GetRes());
+        }
+    }
+}
+
+
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace asdasd
+{
+    class Class1
+    {
+
+
+        public int FootballTeam1()
+        {
+            var playerlist = new List<Tuple<string, int>>();
+            Random rnd = new Random();
+            playerlist.Add(Tuple.Create("goalkeeper1", rnd.Next(40, 99)));
+            playerlist.Add(Tuple.Create("playerdefender1", rnd.Next(40, 99)));
+            playerlist.Add(Tuple.Create("playerdefender2", rnd.Next(40, 99)));
+            playerlist.Add(Tuple.Create("playerdefender3", rnd.Next(40, 99)));
+            playerlist.Add(Tuple.Create("playerdefender4", rnd.Next(40, 99)));
+            playerlist.Add(Tuple.Create("playermidfielder1", rnd.Next(40, 99)));
+            playerlist.Add(Tuple.Create("playermidfielder2", rnd.Next(40, 99)));
+            playerlist.Add(Tuple.Create("playermidfielder3", rnd.Next(40, 99)));
+            playerlist.Add(Tuple.Create("playerattacker1", rnd.Next(40, 99)));
+            playerlist.Add(Tuple.Create("playerattacker2", rnd.Next(40, 99)));
+            playerlist.Add(Tuple.Create("playerattacker3", rnd.Next(40, 99)));
+            var res = 0;
+            foreach (var list in playerlist)
+            {
+                res += list.Item2;
+                Console.WriteLine($"{list.Item2}");
+            }
+            return res;
+            
+        }
+        public int FootballTeam2()
+        {
+            Random rnd = new Random();
+            var playerlist = new List<Tuple<string, int>>();
+            playerlist.Add(Tuple.Create("playergoalkeeper1", rnd.Next(40, 99)));
+            playerlist.Add(Tuple.Create("playerdefender1", rnd.Next(40, 99)));
+            playerlist.Add(Tuple.Create("playerdefender2", rnd.Next(40, 99)));
+            playerlist.Add(Tuple.Create("playerdefender3", rnd.Next(40, 99)));
+            playerlist.Add(Tuple.Create("playerdefender4", rnd.Next(40, 99)));
+            playerlist.Add(Tuple.Create("playermidfielder1", rnd.Next(40, 99)));
+            playerlist.Add(Tuple.Create("playermidfielder2", rnd.Next(40, 99)));
+            playerlist.Add(Tuple.Create("playermidfielder3", rnd.Next(40, 99)));
+            playerlist.Add(Tuple.Create("playerattacker1", rnd.Next(40, 99)));
+            playerlist.Add(Tuple.Create("playerattacker2", rnd.Next(40, 99)));
+            playerlist.Add(Tuple.Create("playerattacker3", rnd.Next(40, 99)));
+            var res = 0;
+            foreach (var list in playerlist)
+            {
+                res += list.Item2;
+                Console.WriteLine($"{list.Item2}");
+            }
+            return res;
+        }
+    }
+}
